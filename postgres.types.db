@@ -1,0 +1,22 @@
+#types for collectd
+
+database_stats numbackends:GAUGE:0:u
+
+database_stats_xact xact_rollback:COUNTER:0:u, xact_commit:COUNTER:0:u
+
+database_stats_blks blks_read:COUNTER:0:u, blks_hit:COUNTER:0:u
+database_stats_tup tup_returned:COUNTER:0:u, tup_fetched:COUNTER:0:u, tup_inserted:COUNTER:0:u, tup_updated:COUNTER:0:u, tup_deleted:COUNTER:0:u
+
+bgwriter_stats_checkpoints  checkpoints_timed:COUNTER:0:u, checkpoints_req:COUNTER:0:u
+
+bgwriter_stats_buffers buffers_checkpoint:COUNTER:0:u, buffers_clean:COUNTER:0:u, buffers_backend:COUNTER:0:u, buffers_alloc:COUNTER:0:u
+
+bgwriter_stats_others maxwritten_clean:COUNTER:0:u, buffers_backend_fsync:COUNTER:0:u
+
+
+
+# pg_stat_all_indexes and pg_statio_all_indexes combined
+index_stats idx_scan:COUNTER:0:U, idx_tup_read:COUNTER:0:U, idx_tup_fetch:COUNTER:0:U, idx_blks_read:COUNTER:0:U, idx_blks_hit:COUNTER:0:U
+
+analyze_stats duration:GAUGE:0:u, analyze_count:COUNTER:0:u, autoanalyze_count:COUNTER:0:u
+vacuum_stats duration:GAUGE:0:u, vacuum_count:COUNTER:0:u, autovacuum_count:COUNTER:0:u
